@@ -4,7 +4,7 @@
 
 int N, map[26][26] = { 0 };
 int check[26][26] = { 0 };
-int house_cnt[26 * 13 +1] = { 0 };
+int house_cnt[320] = { 0 };
 int cnt = 0, z = 0;;
 
 void cmp(const void* a, const void* b) {
@@ -29,8 +29,9 @@ void DFS(int y, int x) {
 
     //만약 y+1값이 over가 아니고, map에서 1이라면 DFS ㄱ
     if (y + 1 < N && map[y + 1][x] == 1 && check[y + 1][x] == 0) DFS(y + 1, x);
+    
+    return;     
 }
-
 
 int main()
 {
