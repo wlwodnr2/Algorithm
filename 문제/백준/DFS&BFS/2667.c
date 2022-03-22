@@ -7,7 +7,7 @@ int check[26][26] = { 0 };
 int house_cnt[320] = { 0 };
 int cnt = 0, z = 0;;
 
-void cmp(const void* a, const void* b) {
+int cmp(const void* a, const void* b) {
     int num1 = *(int*)a;
     int num2 = *(int*)b;
 
